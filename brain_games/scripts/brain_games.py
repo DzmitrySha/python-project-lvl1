@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 def greet(who):
     print(f'Welcome to the {who}!')
