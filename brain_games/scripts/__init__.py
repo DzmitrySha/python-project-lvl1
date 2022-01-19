@@ -1,0 +1,1 @@
+"""Brain-games scripts package."""
