@@ -1,5 +1,6 @@
+#!/usr/bin/env python
 """Main module of the Brain games App."""
-# #!/usr/bin/env python
+
 
 from brain_games.cli import welcome_user
 
