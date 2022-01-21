@@ -2,13 +2,25 @@
 """Main module of the Brain games App."""
 
 
-from brain_games.cli import welcome_user
+import prompt
+
+
+def welcome_user():
+    """Get user name and greets.
+
+    Returns:
+        - string: name of user
+
+    """
+    print('Welcome to the Brain games!')
+    global name
+    name = prompt.string('May I have your name? ')
+    print('Hello, {0}!'.format(name))
+    return name
 
 
 def main():
-    """Do the main start of the program."""
-    print('Welcome to the Brain games!')
-    print(welcome_user())
+    welcome_user()
 
 
 if __name__ == '__main__':
