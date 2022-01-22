@@ -4,4 +4,6 @@
 [![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
 [![workflow](https://github.com/DzmitrySha/python-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/DzmitrySha/python-project-lvl1/actions/workflows/github-actions-demo.yml)
 
-[Игра: "Проверка на чётность" (установка, запуск, демо-игра)](https://asciinema.org/a/Afvk1y0amcGF00hnfd56tIarr)
+[Игра: "Проверка на чётность" (установка, запуск, демо)](https://asciinema.org/a/Afvk1y0amcGF00hnfd56tIarr)
+
+[Игра: "Калькулятор" (запуск, демо)](https://asciinema.org/a/pqKUhmJqKEpKJndJoNYaM5Qly)
