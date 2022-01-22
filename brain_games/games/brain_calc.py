@@ -1,34 +1,35 @@
 #!/usr/bin/env python
-"""Brain-Even Game."""
+"""Brain-Calc Game."""
 
 
-from random import randint
+from random import randint, choice
+from operator import add, sub, mul
 
-from brain_games.scripts.game_scripts import welcome_user, \
-    get_user_answer, game_messages, is_user_answer_correct
-
-
-def make_numbers():
-    number = randint(1, 99)
-    print('Question: {0}'.format(number))
-    return number
+from brain_games.scripts.game_scripts import welcome_user,\
+    get_user_answer, is_user_answer_correct, game_messages
 
 
-def make_correct_answer(number):
-    if number % 2 == 0:
-        return 'yes'
-    return 'no'
+def make_expression():
+    num1 = randint(1, 12)
+    num2 = randint(1, 10)
+    operator, op_symbol = choice([
+        (add, '+'),
+        (sub, '-'),
+        (mul, '*'),
+    ])
+    print('Question: {0} {1} {2}'.format(num1, op_symbol, num2))
+    result = operator(num1, num2)
+    return str(result)
 
 
 def main():
-    """Start the "Brain-Even Game"."""
+    """Start the "Brain-Calc Game"."""
     name = welcome_user()
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    print('What is the result of the expression?')
     count = 1
     while count <= 3:
-        number = make_numbers()
+        correct_answer = make_expression()
         user_answer = get_user_answer()
-        correct_answer = make_correct_answer(number)
         user_correct = is_user_answer_correct(user_answer, correct_answer)
         game_message = game_messages(name, correct_answer, user_answer)
         if user_correct and count < 3:
