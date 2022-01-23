@@ -7,3 +7,5 @@
 [Игра: "Проверка на чётность" (установка, запуск, демо)](https://asciinema.org/a/Afvk1y0amcGF00hnfd56tIarr)
 
 [Игра: "Калькулятор" (запуск, демо)](https://asciinema.org/a/pqKUhmJqKEpKJndJoNYaM5Qly)
+
+[Игра: "Наибольший общий делитель (НОД)" (запуск, демо)](https://asciinema.org/a/UAOdB4EiZsYCDfI2tcUBEDpsh)
