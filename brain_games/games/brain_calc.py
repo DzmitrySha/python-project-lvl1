@@ -5,8 +5,7 @@
 from random import randint, choice
 from operator import add, sub, mul
 
-from brain_games.scripts.game_scripts import welcome_user,\
-    get_user_answer, is_user_answer_correct, game_messages
+from brain_games.scripts.game_scripts import welcome_user, game_logic
 
 
 def get_correct_answer():
@@ -26,22 +25,7 @@ def main():
     """Start the "Brain-Calc Game"."""
     name = welcome_user()
     print('What is the result of the expression?')
-    count = 1
-    while count <= 3:
-        correct_answer = get_correct_answer()
-        user_answer = get_user_answer()
-        user_correct = is_user_answer_correct(user_answer, correct_answer)
-        game_message = game_messages(name, correct_answer, user_answer)
-        if user_correct and count < 3:
-            count += 1
-            print(game_message['correct'])
-        elif user_correct and count == 3:
-            print(game_message['correct'])
-            print(game_message['win'])
-            break
-        else:
-            print(game_message['lost'])
-            break
+    game_logic(name, get_correct_answer)
 
 
 if __name__ == '__main__':
