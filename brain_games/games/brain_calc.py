@@ -9,7 +9,7 @@ from brain_games.scripts.game_scripts import welcome_user,\
     get_user_answer, is_user_answer_correct, game_messages
 
 
-def make_expression():
+def get_correct_answer():
     num1 = randint(1, 12)
     num2 = randint(1, 10)
     operator, op_symbol = choice([
@@ -28,7 +28,7 @@ def main():
     print('What is the result of the expression?')
     count = 1
     while count <= 3:
-        correct_answer = make_expression()
+        correct_answer = get_correct_answer()
         user_answer = get_user_answer()
         user_correct = is_user_answer_correct(user_answer, correct_answer)
         game_message = game_messages(name, correct_answer, user_answer)
