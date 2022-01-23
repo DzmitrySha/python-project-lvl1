@@ -9,3 +9,5 @@
 [Игра: "Калькулятор" (запуск, демо)](https://asciinema.org/a/pqKUhmJqKEpKJndJoNYaM5Qly)
 
 [Игра: "Наибольший общий делитель (НОД)" (запуск, демо)](https://asciinema.org/a/UAOdB4EiZsYCDfI2tcUBEDpsh)
+
+[Игра: "Арифметическая прогрессия" (запуск, демо)](https://asciinema.org/a/XpSGjCxev02AL29nGIEM4MO1J)
