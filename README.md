@@ -11,3 +11,5 @@
 [Игра: "Наибольший общий делитель (НОД)" (запуск, демо)](https://asciinema.org/a/UAOdB4EiZsYCDfI2tcUBEDpsh)
 
 [Игра: "Арифметическая прогрессия" (запуск, демо)](https://asciinema.org/a/XpSGjCxev02AL29nGIEM4MO1J)
+
+[Игра: "Простое ли число?" (запуск, демо)](https://asciinema.org/a/54MJk3NzuNAx3mhKVmUdfhv1r)
