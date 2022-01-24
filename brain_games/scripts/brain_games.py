@@ -1,21 +1,8 @@
 #!/usr/bin/env python
-"""Main module of the Brain games App."""
+"""Main Brain games module."""
 
 
-import prompt
-
-
-def welcome_user():
-    """Get user name and greets.
-
-    Returns:
-        - string: name of user
-
-    """
-    print('Welcome to the Brain games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello, {0}!'.format(name))
-    return name
+from brain_games.cli import welcome_user
 
 
 def main():

@@ -1,14 +1,12 @@
-"""Welcome client module."""
+"""Welcome user script."""
+
 
 import prompt
 
 
 def welcome_user():
-    """Get name and greeting to user.
+    """Get name and greeting to user.   """
 
-    Returns:
-        greeting to user
-
-    """
+    print('Welcome to the Brain games!')
     name = prompt.string('May I have your name? ')
-    return ('Hello, {0}!'.format(name))
+    print('Hello, {0}!'.format(name))
