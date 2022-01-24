@@ -9,9 +9,13 @@ from brain_games.scripts.game_scripts import welcome_user, game_logic
 
 
 def get_correct_answer():
-    len_progression = randrange(4, 10)
-    start_num = randrange(0, 21)
-    step = randrange(1, 11)
+    len_min, len_max = 4, 10
+    len_progression = randrange(len_min, len_max)
+    max_range = 21
+    start_num = randrange(max_range)
+    min_step = 1
+    max_step = 11
+    step = randrange(min_step, max_step)
     progression = [start_num, ]
     for i in range(len_progression):
         progression.append(start_num + step)

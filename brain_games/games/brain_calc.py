@@ -9,8 +9,9 @@ from brain_games.scripts.game_scripts import welcome_user, game_logic
 
 
 def get_correct_answer():
-    num1 = randint(1, 12)
-    num2 = randint(1, 10)
+    start, end = 1, 12
+    num1 = randint(start, end)
+    num2 = randint(start, end)
     operator, op_symbol = choice([
         (add, '+'),
         (sub, '-'),

@@ -9,8 +9,9 @@ from brain_games.scripts.game_scripts import welcome_user, game_logic
 
 
 def get_correct_answer():
-    num1 = randint(1, 99)
-    num2 = randint(1, 99)
+    start, end = 1, 99
+    num1 = randint(start, end)
+    num2 = randint(start, end)
     print('Question: {0} {1}'.format(num1, num2))
     correct_answer = gcd(num1, num2)
     return str(correct_answer)

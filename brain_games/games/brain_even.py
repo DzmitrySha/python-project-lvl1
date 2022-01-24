@@ -8,7 +8,8 @@ from brain_games.scripts.game_scripts import welcome_user, game_logic
 
 
 def get_correct_answer():
-    number = randint(1, 99)
+    start, end = 1, 99
+    number = randint(start, end)
     print('Question: {0}'.format(number))
     if number % 2 == 0:
         return 'yes'

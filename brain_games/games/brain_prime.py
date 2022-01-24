@@ -9,7 +9,8 @@ from brain_games.scripts.game_scripts import welcome_user, game_logic
 
 
 def get_correct_answer():
-    number = randrange(1, 11)
+    start, end = 1, 20
+    number = randrange(start, end)
     print('Question: {0}'.format(number))
     if number == 1:
         return 'no'
