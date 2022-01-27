@@ -1,14 +1,14 @@
 #!/usr/bin/env python
-"""Brain Progression Game."""
+"""Brain Progression Functions."""
 
 
 from random import randrange
 
 
-from brain_games.scripts.game_scripts import welcome_user, game_logic
+TASK = 'What number is missing in the progression?'
 
 
-def get_correct_answer():
+def make_correct_answer():
     len_min, len_max = 4, 10
     len_progression = randrange(len_min, len_max)
     max_range = 21
@@ -21,19 +21,8 @@ def get_correct_answer():
         progression.append(start_num + step)
         start_num += step
     random_index = randrange(0, len_progression + 1)
-    ask_number = progression[random_index]
+    correct_answer = progression[random_index]
     progression[random_index] = '..'
     list_progression = ' '.join(map(str, progression))
     print('Question: {0}'.format(list_progression))
-    return str(ask_number)
-
-
-def main():
-    """Start the "Brain-Progression Game"."""
-    name = welcome_user()
-    print('What number is missing in the progression?')
-    game_logic(name, get_correct_answer)
-
-
-if __name__ == '__main__':
-    main()
+    return str(correct_answer)

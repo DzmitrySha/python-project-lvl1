@@ -1,24 +1,23 @@
-"""Scripts for all Brain_Games."""
+"""Engine for all Brain Games."""
 
 
 import prompt
 
 
-def welcome_user():
-    """Get username and greets.
-
-    Returns:
-        - string: username
-
-    """
-    print('Welcome to the Brain games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello, {0}!'.format(name))
-    return name
+def get_user_name():
+    return prompt.string('May I have your name? ')
 
 
 def get_user_answer():
     return prompt.string('Your answer: ')
+
+
+def welcome_user():
+    """Get username and greets."""
+    print('Welcome to the Brain games!')
+    user_name = get_user_name()
+    print('Hello, {0}!'.format(user_name))
+    return user_name
 
 
 def is_user_answer_correct(user_answer, correct_answer):
@@ -38,20 +37,29 @@ def game_messages(name, correct_answer, user_answer):
     return messages
 
 
-def game_logic(name, get_correct_answer):
+NUMBER_OF_ROUNDS = 3
+
+
+def game_logic(user_name, make_correct_answer):
     count = 1
-    while count <= 3:
-        correct_answer = get_correct_answer()
+    while count <= NUMBER_OF_ROUNDS:
+        correct_answer = make_correct_answer()
         user_answer = get_user_answer()
-        user_correct = is_user_answer_correct(user_answer, correct_answer)
-        game_message = game_messages(name, correct_answer, user_answer)
-        if user_correct and count < 3:
+        is_user_correct = is_user_answer_correct(user_answer, correct_answer)
+        game_message = game_messages(user_name, correct_answer, user_answer)
+        if is_user_correct and count < NUMBER_OF_ROUNDS:
             count += 1
             print(game_message['correct'])
-        elif user_correct and count == 3:
+        elif is_user_correct and count == NUMBER_OF_ROUNDS:
             print(game_message['correct'])
             print(game_message['win'])
             break
         else:
             print(game_message['lost'])
             break
+
+
+def start(TASK, make_correct_answer):
+    user_name = welcome_user()
+    print(TASK)
+    game_logic(user_name, make_correct_answer)
