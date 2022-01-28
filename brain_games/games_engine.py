@@ -60,7 +60,7 @@ def game_logic(user_name, make_correct_answer):
             break
 
 
-def start(TASK, make_correct_answer):
+def start(task, make_correct_answer):
     user_name = welcome_user()
-    print(TASK)
+    print(task)
     game_logic(user_name, make_correct_answer)
