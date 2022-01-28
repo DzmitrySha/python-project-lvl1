@@ -38,10 +38,11 @@ def game_messages(name, correct_answer, user_answer):
 
 
 NUMBER_OF_ROUNDS = 3
+FIRST_ROUND = 1
 
 
 def game_logic(user_name, make_correct_answer):
-    count = 1
+    count = FIRST_ROUND
     while count <= NUMBER_OF_ROUNDS:
         correct_answer = make_correct_answer()
         user_answer = get_user_answer()
