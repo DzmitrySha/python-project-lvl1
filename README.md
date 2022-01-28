@@ -13,7 +13,7 @@ _(5 игр)_
 
 _Вам показывается случайное число. Нужно ответить 'yes', если число чётное, или 'no' — если нечётное._
 
-[![asciicast](https://asciinema.org/a/Afvk1y0amcGF00hnfd56tIarr.png)](https://asciinema.org/a/Afvk1y0amcGF00hnfd56tIarr)
+[![asciicast](https://asciinema.org/a/ynuiw1bT6IjeKzFu9IlU9Uj3y.png)](https://asciinema.org/a/ynuiw1bT6IjeKzFu9IlU9Uj3y)
 
 
 ### Игра "Калькулятор".
