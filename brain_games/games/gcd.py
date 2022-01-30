@@ -6,9 +6,6 @@ from random import randint
 from math import gcd
 
 
-TASK = 'Find the greatest common divisor of given numbers.'
-
-
 def make_correct_answer():
     start, end = 1, 99
     num1 = randint(start, end)

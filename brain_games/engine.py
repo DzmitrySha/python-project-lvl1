@@ -4,6 +4,17 @@
 import prompt
 
 
+MAX_ROUNDS = 3
+
+GAMES_QUESTIONS = {
+    'calc': 'What is the result of the expression?',
+    'even': 'Answer "yes" if the number is even, otherwise answer "no".',
+    'gcd': 'Find the greatest common divisor of given numbers.',
+    'prime': "Answer 'yes' if given number is prime. Otherwise answer 'no'.",
+    'progression': 'What number is missing in the progression?',
+}
+
+
 def get_user_name():
     return prompt.string('May I have your name? ')
 
@@ -37,12 +48,9 @@ def make_messages(user_name, correct_answer, user_answer):
     return messages
 
 
-MAX_ROUNDS = 3
-
-
-def run_game(task, make_correct_answer):
+def run_game(game_name, make_correct_answer):
     user_name = welcome_user()
-    print(task)
+    print(GAMES_QUESTIONS[game_name])
     round_number = 1
     while round_number <= MAX_ROUNDS:
         correct_answer = make_correct_answer()

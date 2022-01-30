@@ -5,9 +5,6 @@
 from random import randrange
 
 
-TASK = "Answer 'yes' if given number is prime. Otherwise answer 'no'."
-
-
 def make_correct_answer():
     start, end = 1, 20
     number = randrange(start, end)

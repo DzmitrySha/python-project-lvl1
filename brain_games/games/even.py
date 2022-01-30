@@ -5,9 +5,6 @@
 from random import randint
 
 
-TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
-
-
 def make_correct_answer():
     start, end = 1, 99
     number = randint(start, end)

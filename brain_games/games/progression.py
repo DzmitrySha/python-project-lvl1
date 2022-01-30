@@ -5,9 +5,6 @@
 from random import randrange
 
 
-TASK = 'What number is missing in the progression?'
-
-
 def make_correct_answer():
     len_min, len_max = 4, 10
     len_progression = randrange(len_min, len_max)

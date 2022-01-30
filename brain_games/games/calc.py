@@ -6,9 +6,6 @@ from random import randint, choice
 from operator import add, sub, mul
 
 
-TASK = 'What is the result of the expression?'
-
-
 def make_correct_answer():
     start, end = 1, 12
     num1 = randint(start, end)
