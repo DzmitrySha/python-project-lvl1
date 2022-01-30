@@ -1,8 +1,6 @@
 """Engine for all Brain Games."""
 
-
 import prompt
-
 
 MAX_ROUNDS = 3
 
@@ -15,18 +13,10 @@ GAMES_QUESTIONS = {
 }
 
 
-def get_user_name():
-    return prompt.string('May I have your name? ')
-
-
-def get_user_answer():
-    return prompt.string('Your answer: ')
-
-
 def welcome_user():
     """Get username and greets."""
-    print('Welcome to the Brain games!')
-    user_name = get_user_name()
+    print('Welcome to the Brain Games!')
+    user_name = prompt.string('May I have your name? ')
     print('Hello, {0}!'.format(user_name))
     return user_name
 
@@ -54,7 +44,7 @@ def run_game(game_name, make_correct_answer):
     round_number = 1
     while round_number <= MAX_ROUNDS:
         correct_answer = make_correct_answer()
-        user_answer = get_user_answer()
+        user_answer = prompt.string('Your answer: ')
         game_message = make_messages(user_name, correct_answer, user_answer)
         if not is_user_answer_correct(user_answer, correct_answer):
             print(game_message['lost'])
