@@ -3,7 +3,7 @@
 
 
 from brain_games.games_engine import start
-from brain_games.games.brain_gcd_func import TASK, make_correct_answer
+from brain_games.games.gcd import TASK, make_correct_answer
 
 
 def main():
