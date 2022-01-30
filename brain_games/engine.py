@@ -1,0 +1,57 @@
+"""Engine for all Brain Games."""
+
+
+import prompt
+
+
+def get_user_name():
+    return prompt.string('May I have your name? ')
+
+
+def get_user_answer():
+    return prompt.string('Your answer: ')
+
+
+def welcome_user():
+    """Get username and greets."""
+    print('Welcome to the Brain games!')
+    user_name = get_user_name()
+    print('Hello, {0}!'.format(user_name))
+    return user_name
+
+
+def is_user_answer_correct(user_answer, correct_answer):
+    if user_answer == correct_answer:
+        return True
+    return False
+
+
+def make_messages(user_name, correct_answer, user_answer):
+    messages = {
+        'correct': "Correct!",
+        'win': f"Congratulations, {user_name}!",
+        'lost': (f"'{user_answer}' is wrong answer ;(. "
+                 f"Correct answer was '{correct_answer}'.\n"
+                 f"Let\'s try again, {user_name}!"),
+    }
+    return messages
+
+
+MAX_ROUNDS = 3
+
+
+def run_game(task, make_correct_answer):
+    user_name = welcome_user()
+    print(task)
+    round_number = 1
+    while round_number <= MAX_ROUNDS:
+        correct_answer = make_correct_answer()
+        user_answer = get_user_answer()
+        game_message = make_messages(user_name, correct_answer, user_answer)
+        if not is_user_answer_correct(user_answer, correct_answer):
+            print(game_message['lost'])
+            break
+        print(game_message['correct'])
+        round_number += 1
+    else:
+        print(game_message['win'])
