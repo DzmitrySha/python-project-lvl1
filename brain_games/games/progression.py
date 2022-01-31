@@ -21,8 +21,9 @@ def make_progression():
     first_num = randint(MIN_FIRST_NUM, MAX_FIRST_NUM)
     progression = [first_num, ]
     for i in range(progression_len):
-        progression.append(first_num + progression_step)
-        first_num += progression_step
+        next_num = first_num + progression_step
+        progression.append(next_num)
+        first_num = next_num
     return progression
 
 
@@ -31,6 +32,6 @@ def make_correct_answer():
     random_index = randint(0, len(progression) - 1)
     correct_answer = progression[random_index]
     progression[random_index] = '..'
-    list_progression = ' '.join(map(str, progression))
-    print('Question: {0}'.format(list_progression))
+    progression_list = ' '.join(map(str, progression))
+    print('Question: {0}'.format(progression_list))
     return str(correct_answer)
