@@ -5,19 +5,29 @@
 from random import randrange
 
 
+MIN_LENGTH = 4
+MAX_LENGTH = 10
+
+MAX_FIRST_NUM = 20
+
+MIN_STEP = 1
+MAX_STEP = 11
+
+
+def make_progression():
+    progression_len = randrange(MIN_LENGTH, MAX_LENGTH)
+    progression_step = randrange(MIN_STEP, MAX_STEP)
+    first_num = randrange(MAX_FIRST_NUM)
+    progression = [first_num, ]
+    for i in range(progression_len):
+        progression.append(first_num + progression_step)
+        first_num += progression_step
+    return progression
+
+
 def make_correct_answer():
-    len_min, len_max = 4, 10
-    len_progression = randrange(len_min, len_max)
-    max_range = 21
-    start_num = randrange(max_range)
-    min_step = 1
-    max_step = 11
-    step = randrange(min_step, max_step)
-    progression = [start_num, ]
-    for i in range(len_progression):
-        progression.append(start_num + step)
-        start_num += step
-    random_index = randrange(0, len_progression + 1)
+    progression = make_progression()
+    random_index = randrange(0, len(progression))
     correct_answer = progression[random_index]
     progression[random_index] = '..'
     list_progression = ' '.join(map(str, progression))

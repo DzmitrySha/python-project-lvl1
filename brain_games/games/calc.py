@@ -6,10 +6,13 @@ from random import randint, choice
 from operator import add, sub, mul
 
 
+MIN_NUMBER = 1
+MAX_NUMBER = 12
+
+
 def make_correct_answer():
-    start, end = 1, 12
-    num1 = randint(start, end)
-    num2 = randint(start, end)
+    num1 = randint(MIN_NUMBER, MAX_NUMBER)
+    num2 = randint(MIN_NUMBER, MAX_NUMBER)
     operator, op_symbol = choice([
         (add, '+'),
         (sub, '-'),

@@ -5,9 +5,12 @@
 from random import randint
 
 
+MIN_NUMBER = 1
+MAX_NUMBER = 99
+
+
 def make_correct_answer():
-    start, end = 1, 99
-    number = randint(start, end)
+    number = randint(MIN_NUMBER, MAX_NUMBER)
     print('Question: {0}'.format(number))
     if number % 2 == 0:
         correct_answer = 'yes'

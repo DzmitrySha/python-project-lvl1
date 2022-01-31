@@ -2,12 +2,15 @@
 """Brain Prime Functions."""
 
 
-from random import randrange
+from random import randint
+
+
+MIN_NUMBER = 1
+MAX_NUMBER = 21
 
 
 def make_correct_answer():
-    start, end = 1, 20
-    number = randrange(start, end)
+    number = randint(MIN_NUMBER, MAX_NUMBER)
     print('Question: {0}'.format(number))
     if number == 1:
         return 'no'
