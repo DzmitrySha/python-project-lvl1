@@ -2,19 +2,15 @@
 """Brain Prime Functions."""
 
 
-from random import randint
-
-
-MIN_NUMBER = 1
-MAX_NUMBER = 21
+from brain_games.engine import generate_number
 
 
 def make_correct_answer():
-    number = randint(MIN_NUMBER, MAX_NUMBER)
-    print('Question: {0}'.format(number))
+    number = generate_number(min_number=1, max_number=21)
+    question = 'Question: {0}'.format(number)
     if number == 1:
-        return 'no'
+        return "no", question
     for i in range(2, (number // 2 + 1)):
         if number % i == 0:
-            return 'no'
-    return 'yes'
+            return "no", question
+    return "yes", question

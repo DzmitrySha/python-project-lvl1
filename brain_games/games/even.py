@@ -2,18 +2,14 @@
 """Brain-Even Functions."""
 
 
-from random import randint
-
-
-MIN_NUMBER = 1
-MAX_NUMBER = 99
+from brain_games.engine import generate_number
 
 
 def make_correct_answer():
-    number = randint(MIN_NUMBER, MAX_NUMBER)
-    print('Question: {0}'.format(number))
+    number = generate_number()
+    question = ('Question: {0}'.format(number))
     if number % 2 == 0:
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
-    return correct_answer
+    return correct_answer, question

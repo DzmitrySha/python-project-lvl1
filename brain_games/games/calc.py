@@ -2,22 +2,19 @@
 """Brain-Calc Functions."""
 
 
-from random import randint, choice
+from random import choice
 from operator import add, sub, mul
-
-
-MIN_NUMBER = 1
-MAX_NUMBER = 12
+from brain_games.engine import generate_number
 
 
 def make_correct_answer():
-    num1 = randint(MIN_NUMBER, MAX_NUMBER)
-    num2 = randint(MIN_NUMBER, MAX_NUMBER)
+    num1 = generate_number(min_number=1, max_number=12)
+    num2 = generate_number(min_number=1, max_number=12)
     operator, op_symbol = choice([
         (add, '+'),
         (sub, '-'),
         (mul, '*'),
     ])
-    print('Question: {0} {1} {2}'.format(num1, op_symbol, num2))
     correct_answer = operator(num1, num2)
-    return str(correct_answer)
+    question = ('Question: {0} {1} {2}'.format(num1, op_symbol, num2))
+    return str(correct_answer), question

@@ -3,12 +3,12 @@
 
 
 from brain_games.engine import run_game
-from brain_games.games.gcd import make_correct_answer
+from brain_games.games import gcd
 
 
 def main():
     """Start the "Brain-GCD Game"."""
-    run_game('gcd', make_correct_answer)
+    run_game(gcd)
 
 
 if __name__ == '__main__':

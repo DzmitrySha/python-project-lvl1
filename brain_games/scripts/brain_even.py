@@ -3,12 +3,12 @@
 
 
 from brain_games.engine import run_game
-from brain_games.games.even import make_correct_answer
+from brain_games.games import even
 
 
 def main():
     """Start the "Brain-Even Game"."""
-    run_game('even', make_correct_answer)
+    run_game(even)
 
 
 if __name__ == '__main__':

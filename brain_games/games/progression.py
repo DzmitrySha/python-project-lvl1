@@ -2,8 +2,7 @@
 """Brain Progression Functions."""
 
 
-from random import randint
-
+from brain_games.engine import generate_number
 
 MIN_LENGTH = 4
 MAX_LENGTH = 10
@@ -16,9 +15,9 @@ MAX_STEP = 11
 
 
 def make_progression():
-    progression_len = randint(MIN_LENGTH, MAX_LENGTH)
-    progression_step = randint(MIN_STEP, MAX_STEP)
-    first_num = randint(MIN_FIRST_NUM, MAX_FIRST_NUM)
+    progression_len = generate_number(MIN_LENGTH, MAX_LENGTH)
+    progression_step = generate_number(MIN_STEP, MAX_STEP)
+    first_num = generate_number(MIN_FIRST_NUM, MAX_FIRST_NUM)
     progression = [first_num, ]
     for i in range(progression_len):
         next_num = first_num + progression_step
@@ -29,9 +28,9 @@ def make_progression():
 
 def make_correct_answer():
     progression = make_progression()
-    random_index = randint(0, len(progression) - 1)
+    random_index = generate_number(0, len(progression) - 1)
     correct_answer = progression[random_index]
     progression[random_index] = '..'
     progression_list = ' '.join(map(str, progression))
-    print('Question: {0}'.format(progression_list))
-    return str(correct_answer)
+    question = 'Question: {0}'.format(progression_list)
+    return str(correct_answer), question
