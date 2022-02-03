@@ -9,10 +9,12 @@ GAMES_DESCRIPTIONS = {
     'brain_games.games.calc': 'What is the result of the expression?',
     'brain_games.games.even': 'Answer "yes" if the number is even, '
                               'otherwise answer "no".',
-    'brain_games.games.gcd': 'Find the greatest common divisor of given numbers.',
+    'brain_games.games.gcd': 'Find the greatest common divisor of given '
+                             'numbers.',
     'brain_games.games.prime': 'Answer "yes" if given number is prime. '
                                'Otherwise answer "no".',
-    'brain_games.games.progression': 'What number is missing in the progression?',
+    'brain_games.games.progression': 'What number is missing in the '
+                                     'progression?',
 }
 
 
