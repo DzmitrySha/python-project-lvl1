@@ -20,14 +20,17 @@ _(5 игр)_
 ```brain-prime``` - Простое ли число?
 
 
+## Установка и первый запуск
+
+[![asciicast](https://asciinema.org/a/GKm712TAiSBUmyhKE46anFVhb.png)](https://asciinema.org/a/GKm712TAiSBUmyhKE46anFVhb)
+
+
 ---
 ## Игра "Проверка на чётность".
 
 _Вам показывается случайное число. Нужно ответить 'yes', если число чётное, или 'no' — если нечётное._
 
-Установка пакета и запуск игры:
-
-[![asciicast](https://asciinema.org/a/ynuiw1bT6IjeKzFu9IlU9Uj3y.png)](https://asciinema.org/a/ynuiw1bT6IjeKzFu9IlU9Uj3y)
+[![asciicast](https://asciinema.org/a/fngJIAZzVV1kSx5QOzwmlt8L0.png)](https://asciinema.org/a/fngJIAZzVV1kSx5QOzwmlt8L0)
 
 
 ---
@@ -35,25 +38,25 @@ _Вам показывается случайное число. Нужно от�
 
 _Вам показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ._
 
-[![asciicast](https://asciinema.org/a/pqKUhmJqKEpKJndJoNYaM5Qly.png)](https://asciinema.org/a/pqKUhmJqKEpKJndJoNYaM5Qly)
+[![asciicast](https://asciinema.org/a/I8ppUB2XOdxkqwIWXyVhdFDTv.png)](https://asciinema.org/a/I8ppUB2XOdxkqwIWXyVhdFDTv)
 
 
 ---
 ## Игра "Наибольший общий делитель (НОД)".
 
 _Вам показывается два случайных числа, например, 25 50. Пользователь должен вычислить и ввести наибольший общий делитель этих чисел._
-[![asciicast](https://asciinema.org/a/UAOdB4EiZsYCDfI2tcUBEDpsh.png)](https://asciinema.org/a/UAOdB4EiZsYCDfI2tcUBEDpsh)
+[![asciicast](https://asciinema.org/a/bZn2hRGfVLbCxhGwS6TnwPKJZ.png)](https://asciinema.org/a/bZn2hRGfVLbCxhGwS6TnwPKJZ)
 
 
 ---
 ## Игра "Арифметическая прогрессия". 
 
 _Вам показывается случайное число. Нужно ответить 'yes', если число чётное, или 'no' — если нечётное._
-[![asciicast](https://asciinema.org/a/XpSGjCxev02AL29nGIEM4MO1J.png)](https://asciinema.org/a/XpSGjCxev02AL29nGIEM4MO1J)
+[![asciicast](https://asciinema.org/a/sUWMSxO3igT9lCYbJ5QaQpRes.png)](https://asciinema.org/a/sUWMSxO3igT9lCYbJ5QaQpRes)
 
 
 ---
 ## Игра "Простое ли число?".
 
 _Вам показывается ряд чисел, образующий арифметическую прогрессию, одно число скрыто. Вам нужно определить это число._
-[![asciicast](https://asciinema.org/a/54MJk3NzuNAx3mhKVmUdfhv1r.png)](https://asciinema.org/a/54MJk3NzuNAx3mhKVmUdfhv1r)
+[![asciicast](https://asciinema.org/a/iNGHQepWDZchlzGdys6W3p87r.png)](https://asciinema.org/a/iNGHQepWDZchlzGdys6W3p87r)
