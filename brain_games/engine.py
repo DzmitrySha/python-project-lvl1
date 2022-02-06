@@ -43,17 +43,6 @@ def is_user_answer_correct(user_answer, correct_answer):
     return False
 
 
-def make_messages(user_name, correct_answer, user_answer):
-    messages = {
-        'correct': "Correct!",
-        'win': f"Congratulations, {user_name}!",
-        'lost': (f"'{user_answer}' is wrong answer ;(. "
-                 f"Correct answer was '{correct_answer}'.\n"
-                 f"Let\'s try again, {user_name}!"),
-    }
-    return messages
-
-
 def run_game(game_name):
     user_name = welcome_user()
     print(get_description(game_name))
@@ -62,11 +51,12 @@ def run_game(game_name):
         correct_answer, question = game_name.make_correct_answer()
         print(question)
         user_answer = prompt.string('Your answer: ')
-        game_message = make_messages(user_name, correct_answer, user_answer)
         if not is_user_answer_correct(user_answer, correct_answer):
-            print(game_message['lost'])
+            print(f"'{user_answer}' is wrong answer ;(. "
+                  f"Correct answer was '{correct_answer}'.\n"
+                  f"Let\'s try again, {user_name}!")
             break
-        print(game_message['correct'])
+        print("Correct!")
         round_number += 1
     else:
-        print(game_message['win'])
+        print(f"Congratulations, {user_name}!")
