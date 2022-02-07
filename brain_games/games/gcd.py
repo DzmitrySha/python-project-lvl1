@@ -14,6 +14,6 @@ def make_question_and_correct_answer():
     max_number = 99
     number_first = randint(min_number, max_number)
     number_second = randint(min_number, max_number)
-    question = f'{number_first}, {number_second}'
+    question = f'{number_first} {number_second}'
     correct_answer = gcd(number_first, number_second)
     return question, str(correct_answer)
