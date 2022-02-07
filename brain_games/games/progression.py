@@ -2,22 +2,18 @@
 """Brain Progression Functions."""
 
 
-from brain_games.engine import generate_number
+from random import randint
 
-MIN_LENGTH = 4
-MAX_LENGTH = 10
-
-MIN_FIRST_NUM = 0
-MAX_FIRST_NUM = 20
-
-MIN_STEP = 1
-MAX_STEP = 11
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def make_progression():
-    progression_len = generate_number(MIN_LENGTH, MAX_LENGTH)
-    progression_step = generate_number(MIN_STEP, MAX_STEP)
-    first_num = generate_number(MIN_FIRST_NUM, MAX_FIRST_NUM)
+    """ Generate arithmetic progression."""
+    progression_len = 10
+    min_step, max_step = 1, 10
+    min_first_num, max_first_num = 0, 20
+    first_num = randint(min_first_num, max_first_num)
+    progression_step = randint(min_step, max_step)
     progression = [first_num, ]
     for i in range(progression_len):
         next_num = first_num + progression_step
@@ -26,11 +22,11 @@ def make_progression():
     return progression
 
 
-def make_correct_answer():
+def make_question_and_correct_answer():
+    """ Make game question and answer."""
     progression = make_progression()
-    random_index = generate_number(0, len(progression) - 1)
+    random_index = randint(0, len(progression) - 1)
     correct_answer = progression[random_index]
     progression[random_index] = '..'
-    progression_list = ' '.join(map(str, progression))
-    question = 'Question: {0}'.format(progression_list)
-    return str(correct_answer), question
+    question = ' '.join(map(str, progression))
+    return question, str(correct_answer)

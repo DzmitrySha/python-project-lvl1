@@ -3,12 +3,17 @@
 
 
 from math import gcd
-from brain_games.engine import generate_number
+from random import randint
+
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
-def make_correct_answer():
-    num1 = generate_number()
-    num2 = generate_number()
-    question = 'Question: {0} {1}'.format(num1, num2)
-    correct_answer = gcd(num1, num2)
-    return str(correct_answer), question
+def make_question_and_correct_answer():
+    """ Make game question and answer."""
+    min_number = 1
+    max_number = 99
+    number_first = randint(min_number, max_number)
+    number_second = randint(min_number, max_number)
+    question = f'{number_first}, {number_second}'
+    correct_answer = gcd(number_first, number_second)
+    return question, str(correct_answer)
