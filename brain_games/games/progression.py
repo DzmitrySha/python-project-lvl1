@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-"""Brain Progression Functions."""
-
+"""Brain Progression Game."""
 
 from random import randint
 
@@ -8,7 +6,7 @@ DESCRIPTION = 'What number is missing in the progression?'
 
 
 def make_progression():
-    """ Generate arithmetic progression."""
+    """Generate arithmetic progression."""
     progression_len = 10
     min_step, max_step = 1, 10
     min_first_num, max_first_num = 0, 20

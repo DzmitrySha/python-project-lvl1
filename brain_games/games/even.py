@@ -1,6 +1,4 @@
-#!/usr/bin/env python
-"""Brain-Even Functions."""
-
+"""Brain-Even Game."""
 
 from random import randint
 
@@ -8,7 +6,7 @@ DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def make_question_and_correct_answer():
-    """ Make game question and answer."""
+    """Make game question and answer."""
     min_number = 1
     max_number = 99
     number = randint(min_number, max_number)
